@@ -1412,11 +1412,11 @@ while True:
 						aa.append(bossData[i][0])		                     #output_bossData[0] : 보스명
 						if bossMungFlag[i] == True :
 							aa.append(tmp_bossTime[i])                       #output_bossData[1] : 시간
-							aa.append(tmp_bossTime[i].strftime('%H:%M:%S'))  #output_bossData[2] : 시간(00:00:00)  *초 제거 희망시 '%H:%M:%S' -> '%H:%M'
+							aa.append(tmp_bossTime[i].strftime('%H:%M'))  #output_bossData[2] : 시간(00:00:00)  *초 제거 희망시 '%H:%M:%S' -> '%H:%M'
 							aa.append('-')	                                 #output_bossData[3] : -
 						else :
 							aa.append(bossTime[i])                           #output_bossData[1] : 시간            *초 제거 희망시 '%H:%M:%S' -> '%H:%M'
-							aa.append(bossTime[i].strftime('%H:%M:%S'))      #output_bossData[2] : 시간(00:00:00)
+							aa.append(bossTime[i].strftime('%H:%M'))      #output_bossData[2] : 시간(00:00:00)
 							aa.append('+')	                                 #output_bossData[3] : +
 						aa.append(bossData[i][2])                            #output_bossData[4] : 멍/미입력 보스
 						aa.append(bossMungCnt[i])	                         #output_bossData[5] : 멍/미입력횟수
@@ -1427,7 +1427,7 @@ while True:
 				for i in range(fixed_bossNum):
 					aa.append(fixed_bossData[i][0])                      #output_bossData[0] : 보스명
 					aa.append(fixed_bossTime[i])                         #output_bossData[1] : 시간
-					aa.append(fixed_bossTime[i].strftime('%H:%M:%S'))    #output_bossData[2] : 시간(00:00:00)      *초 제거 희망시 '%H:%M:%S' -> '%H:%M'
+					aa.append(fixed_bossTime[i].strftime('%H:%M'))    #output_bossData[2] : 시간(00:00:00)      *초 제거 희망시 '%H:%M:%S' -> '%H:%M'
 					aa.append('@')                                       #output_bossData[3] : @
 					aa.append(0)                                         #output_bossData[4] : 멍/미입력 보스
 					aa.append(0)                                         #output_bossData[5] : 멍/미입력횟수
@@ -1501,11 +1501,11 @@ while True:
 						aa.append(bossData[i][0])		                     #output_bossData[0] : 보스명
 						if bossMungFlag[i] == True :
 							aa.append(tmp_bossTime[i])                       #output_bossData[1] : 시간
-							aa.append(tmp_bossTime[i].strftime('%H:%M:%S'))  #output_bossData[2] : 시간(00:00:00)   *초 제거 희망시 '%H:%M:%S' -> '%H:%M'
+							aa.append(tmp_bossTime[i].strftime('%H:%M'))  #output_bossData[2] : 시간(00:00:00)   *초 제거 희망시 '%H:%M:%S' -> '%H:%M'
 							aa.append('-')	                                 #output_bossData[3] : -
 						else :
 							aa.append(bossTime[i])                           #output_bossData[1] : 시간
-							aa.append(bossTime[i].strftime('%H:%M:%S'))      #output_bossData[2] : 시간(00:00:00)   *초 제거 희망시 '%H:%M:%S' -> '%H:%M'
+							aa.append(bossTime[i].strftime('%H:%M'))      #output_bossData[2] : 시간(00:00:00)   *초 제거 희망시 '%H:%M:%S' -> '%H:%M'
 							aa.append('+')	                                 #output_bossData[3] : +
 						aa.append(bossData[i][2])                            #output_bossData[4] : 멍/미입력 보스
 						aa.append(bossMungCnt[i])	                         #output_bossData[5] : 멍/미입력횟수
@@ -1515,7 +1515,7 @@ while True:
 
 				fixed_information = ''
 				for i in range(fixed_bossNum):
-						tmp_timeSTR = fixed_bossTime[i].strftime('%H:%M:%S')  #*초 제거 희망시 '%H:%M:%S' -> '%H:%M'
+						tmp_timeSTR = fixed_bossTime[i].strftime('%H:%M')  #*초 제거 희망시 '%H:%M:%S' -> '%H:%M'
 						fixed_information += tmp_timeSTR + ' : ' + fixed_bossData[i][0] + '\n'
 
 				if len(fixed_information) != 0:
